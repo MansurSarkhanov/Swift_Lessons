@@ -46,7 +46,7 @@ class BigVehicles : Vehicles
 }
 
 
-
+ 
 class Car : Vehicles
 {
      init() {
@@ -57,8 +57,11 @@ class Car : Vehicles
 
 class Truck : BigVehicles
 {
+    var truckSpeedLimit : Int!
     init() {
        super.init(customerCapacity: 2)
+        truckSpeedLimit = super.speedLimit
+     
    }
    
     
@@ -66,8 +69,10 @@ class Truck : BigVehicles
 
 class Bus : BigVehicles
 {
+    var busSpeedLimit : Int!
     init() {
        super.init(customerCapacity: 55)
+        busSpeedLimit = super.speedLimit
    }
    
     
